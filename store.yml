@@ -18,3 +18,7 @@ management:
         enabled: false
       graphite:
         enabled: false
+        
+uri:
+  customizer:
+    enabled: true
