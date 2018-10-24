@@ -27,8 +27,3 @@ management:
         enabled: false
       graphite:
         enabled: false
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone:"http://localhost:9010/eureka"
