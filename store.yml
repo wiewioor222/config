@@ -1,0 +1,20 @@
+server:
+  port: 9110
+
+management:
+  server:
+    port: "1${server.port}"
+  endpoints:
+    web:
+      base-path: "/admin"
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: "always"
+  metrics:
+    export:
+      jmx:
+        enabled: false
+      graphite:
+        enabled: false
