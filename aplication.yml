@@ -1,18 +1,11 @@
-server:
-  port: 9100
-
-spring:
-  datasource:
-    url: "jdbc:postgresql://${POSTGRES_PORT_5432_TCP_ADDR:192.168.99.100}:${POSTGRES_PORT_5432_TCP_PORT:5432}/${POSTGRES_DB:warehouse}"
-    username: "${POSTGRES_USER:postgres}"
-    password: "${POSTGRES_PASSWORD:sprio}"
-  jpa:
-    hibernate:
-      ddl-auto: "none"
+common:
+  property: common value
+some:
+  property: common value
 
 management:
-  server:
-    port: "1${server.port}"
+#  server:
+#    port: "1${server.port}"
   endpoints:
     web:
       base-path: "/admin"
@@ -27,9 +20,29 @@ management:
         enabled: false
       graphite:
         enabled: false
+
 eureka:
   instance:
     prefer-ip-address: true
+    health-check-url-path: "/admin/health"
+    status-page-url-path: "/admin/info"
+
+ribbon:
+  MaxAutoRetries: 3
+  MaxAutoRetriesNextServer: 1
+  ReadTimeout: 1000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+
+# config first
+---
+eureka:
   client:
     serviceUrl:
       defaultZone: "http://localhost:9010/eureka"
