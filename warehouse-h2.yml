@@ -9,7 +9,3 @@ spring:
   jpa:
     hibernate:
       ddl-auto: "none"
-
-eureka:
-  instance:
-    instanceId: ${random.int}

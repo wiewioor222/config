@@ -27,7 +27,3 @@ management:
         enabled: false
       graphite:
         enabled: false
-
-eureka:
-  instance:
-    instanceId: ${random.int}
