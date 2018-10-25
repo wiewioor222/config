@@ -40,6 +40,18 @@ hystrix:
           thread:
             timeoutInMilliseconds: 5000
 
+feign:
+  hystrix:
+    enabled: true
+
+---
+spring:
+  zipkin:
+    baseUrl: "http://localhost:9411/"
+  sleuth:
+    sampler:
+      probability: 1.0
+
 # config first
 ---
 eureka:
