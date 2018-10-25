@@ -1,5 +1,5 @@
 server:
-  port: 9100
+  port: 0
 
 spring:
   datasource:
@@ -27,3 +27,7 @@ management:
         enabled: false
       graphite:
         enabled: false
+
+eureka:
+  instance:
+    instanceId: ${random.int}
