@@ -6,14 +6,3 @@ spring:
   jpa:
     hibernate:
       ddl-auto: "none"
-
-eureka:
-  instance:
-    instanceId: ${spring.application.name}:${info.instanceId}
-    
-managment:
-  server:
-    port: 0
-    
-server:
-  port: 0
