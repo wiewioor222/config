@@ -1,0 +1,7 @@
+server:
+  port: 1111
+
+hystrix:
+  stream:
+    endpoint:
+      enabled: true
