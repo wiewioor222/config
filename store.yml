@@ -13,3 +13,7 @@ spring:
 uri:
   customizer:
     enabled: false
+    
+feign:
+  hystrix:
+    enabled: true
