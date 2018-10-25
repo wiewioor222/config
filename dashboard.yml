@@ -5,3 +5,10 @@ hystrix:
   stream:
     endpoint:
       enabled: true
+
+turbine:
+  aggregator:
+    clusterConfig: system,domain
+  appConfigure: warehouse,marketing,store,gateway
+  clusterNameExpression: metadata['cluster']
+  instanceUrlSuffix: "admin/hystrix.stream"

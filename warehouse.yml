@@ -6,6 +6,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: "none"
+  zipkin:
+    baseUrl: http://192.168.99.100:9411
 
 
 eureka:
