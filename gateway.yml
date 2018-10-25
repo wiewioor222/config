@@ -1,2 +1,18 @@
 server:
   port: 9990
+  
+zuul:
+#  ignoredServices: *
+  routes:
+    warehouse:
+      serviceId: "warehouse"
+      path: "/items/**"
+      stripPrefix: false
+    marketing:
+      serviceId: "marketing"
+      path: "/specials/**"
+      stripPrefix: false
+    store:
+      serviceId: "store"
+      path: "/baskets/**"
+      stripPrefix: false
