@@ -9,4 +9,11 @@ spring:
 
 eureka:
   instance:
-    instanceId: ${random.int}
+    instanceId: ${spring.application.name}:${info.instanceId}
+    
+managment:
+  server:
+    port: 0
+    
+server:
+  port: 0
