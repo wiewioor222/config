@@ -1,0 +1,5 @@
+https://github.com/openzipkin/docker-zipkin
+
+https://docs.google.com/presentation/d/1N3WpFZFspMZoK9NEDquNrvPHDN3jekKXBzGa5EL8VLM/edit#slide=id.g18d2a5ae97_0_30
+
+https://gitlab.com/kaczynskid
